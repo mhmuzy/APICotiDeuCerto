@@ -26,6 +26,7 @@ namespace Projeto.Services.Controllers
         }
 
         [HttpPost]
+        //[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SetorCadastroModel))]
         public IActionResult Post(FuncaoCadastroModel model)
         {
             if(ModelState.IsValid)
