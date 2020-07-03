@@ -26,6 +26,9 @@ namespace Projeto.Services.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(FuncionarioCadastroModel))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Post(FuncionarioCadastroModel model)
         {
             if (ModelState.IsValid)
